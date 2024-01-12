@@ -396,21 +396,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: JohnLemon
       objectReference: {fileID: 0}
-    - target: {fileID: 2591742683797409620, guid: 827f97bbd09f0406dbad6f7b432c288e,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 4b1a98145628a4199b4654969eb936f8, type: 2}
-    - target: {fileID: 2591742683797409620, guid: 827f97bbd09f0406dbad6f7b432c288e,
-        type: 3}
-      propertyPath: m_UpdateMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7437780100181105273, guid: 827f97bbd09f0406dbad6f7b432c288e,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
