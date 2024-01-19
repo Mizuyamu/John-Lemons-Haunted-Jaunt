@@ -5,11 +5,12 @@ using UnityEngine;
 public class GameEnding : MonoBehaviour
 {
     public float fadeDuration = 1f;
+    public float displayImageDuration = 1f;
     public GameObject player; 
     public CanvasGroup exitBackgroundImageCanvasGroup;
     bool m_IsPlayerAtExit;
     float m_Timer;
-    void update()
+    void Update()
     {
         if(m_IsPlayerAtExit)
         {
@@ -28,5 +29,10 @@ public class GameEnding : MonoBehaviour
     {
         m_Timer += Time.deltaTime;
         exitBackgroundImageCanvasGroup.alpha = m_Timer / fadeDuration;
+
+        if(m_Timer > fadeDuration + displayImageDuration)
+        {
+            Application.Quit ();
+        }
     }
 }
