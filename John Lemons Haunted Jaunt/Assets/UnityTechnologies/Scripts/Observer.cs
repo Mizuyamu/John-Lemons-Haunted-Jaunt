@@ -46,4 +46,24 @@ public class Observer : MonoBehaviour
             m_IsPlayerInRange = false;
         }
     }
-}
+    void update()
+    {
+        if(m_IsPlayerInRange)
+        {
+            Vector3 direction = player.position - transform.position + Vector3.up;
+            Ray ray = new Ray (transform.position, direction);
+            if(Physics.Raycast(ray))
+            {
+                RaycastHit raycastHit;
+                if(Physics.Raycast(ray, out raycastHit))
+            {
+                if(raycastHit.collider.transform == player)
+                {
+            
+                }
+            }
+            }
+        }
+    }
+
+}   
