@@ -7,11 +7,6 @@ public class Observer : MonoBehaviour
     public Transform player;
     public GameEnding gameEnding;
     bool m_IsPlayerInRange;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -33,7 +28,7 @@ public class Observer : MonoBehaviour
     void OnTriggerEnter (Collider other)
     
     {
-        if(other.gameObject == player)
+        if(other.transform == player)
         {
             m_IsPlayerInRange = true;
         }
@@ -52,9 +47,8 @@ public class Observer : MonoBehaviour
         {
             Vector3 direction = player.position - transform.position + Vector3.up;
             Ray ray = new Ray (transform.position, direction);
-            if(Physics.Raycast(ray))
-            {
-                RaycastHit raycastHit;
+            RaycastHit raycastHit;
+            
                 if(Physics.Raycast(ray, out raycastHit))
             {
                 if(raycastHit.collider.transform == player)
@@ -62,7 +56,7 @@ public class Observer : MonoBehaviour
                     gameEnding.CaughtPlayer (); 
                 }
             }
-            }
+                
         }
     }
 
